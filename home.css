@@ -1,0 +1,35 @@
+#home-container{
+    border: 1px solid rgb(72, 16, 255);
+    width: 90vw;
+    margin: 15vh auto auto auto;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "carousel carousel upnext";
+}
+#carousel-session{
+    grid-area: carousel;
+    border: 1px solid white;
+}
+#upnext-session{
+    grid-area: upnext;
+    border: 1px solid rgb(30, 255, 0);
+}
+@media only screen and (max-width:550px){
+    #home-container{
+        margin: 20vh auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "carousel" 
+        "upnext";
+
+    }
+    #carousel-session{
+       
+    }
+    #carousel-session{
+          
+    }
+}
