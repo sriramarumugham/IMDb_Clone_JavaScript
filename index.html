@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="slider.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="watchLater.css" />
   </head>
   <body>
     <!-- nav -->
@@ -79,7 +80,9 @@
         <div id="right">
           <div id="slider-details-container">
             <div id="movie-title-container"><h1>Movie Name</h1></div>
-            <div id="movie-rating-container">4/5</div>
+            <div id="movie-rating-container">
+              <p>4/5</p>
+            </div>
             <div id="movie-year-container">2017</div>
             <div id="movie-runtime-container">45 min</div>
             <div id="movie-director-container">sriram arumugham</div>
@@ -139,11 +142,29 @@
     <section id="movie-details">
       <div class="container">
         <div id="title-container"><h1>Movie Name</h1></div>
-        <div id="rating-container"><h1>1/5</h1></div>
+        <div id="rating-container">
+          <p>1/5 |</p>
+          <p>year |</p>
+          <p>156min</p>
+        </div>
         <div id="poster-container">
           <img
             src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
           />
+        </div>
+        <div id="short-details-container">
+          <p>
+            em ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            tortor dui, vulputate et diam sagittis, vestibulum pharetra enim.
+            Etiam varius eu eros eu tempus. Morbi vehicula mi turpis, feugiat
+            cursus nulla lobortis vel. Duis quis sollicitudin augue. Phasellus
+            faucibus, urna a faucibus faucibus, mi lorem consectetur diam, eget
+            ullamcorper metus dolor vitae nunc. Curabitur egestas gravida
+            lacinia. Duis facilisis mollis velit non porta. Sed ac rutrum
+            ligula. Fusce a nulla rutrum, vehicula metus eget, porttitor magna.
+            Ut tincidunt vulputate arcu sed gravida. Donec dictum dui nisi, eget
+            venenatis nibh feugiat nec. Sed scele
+          </p>
         </div>
         <div id="details-container">
           <!-- <h1>Details</h1> -->
@@ -167,12 +188,49 @@
           <div id="icon-container">
             <i class="fa-solid fa-circle-plus"></i>
           </div>
-         
-          <h1>Add/remove </h1></div>
+
+          <h1>Add/remove</h1>
+        </div>
       </div>
-      <div id="cast-container">cast</div>
+      <div id="cast-container">
+        <ul>
+          <li>names of peopel</li>
+          <li>names of peopel</li>
+          <li>names of peopel</li>
+          <li>names of peopel</li>
+          <li>names of peopel</li>
+        </ul>
+      </div>
     </section>
     <!-- end of movie detis container -->
+
+    <!-- watchlist container -->
+    <div id="watch-list-container">
+      <div id="watch-list-inner-container">
+        <div class="watch-later-movie-card">
+          <div class="watch-later-img">
+            <img />
+          </div>
+          <div class="watch-later-title">
+            <h1>Movie title</h1>
+            <div class="watch-later-details-container">
+              <p>56 min</p>
+              |
+              <p>2/6</p>
+              |
+              
+            </div>
+            <div class="watch-later-details-container">
+             <p>Sreeram </p>
+            </div>
+             <div class="watch-later-button">
+              <i class="fa-solid fa-bookmark"></i>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of watchlist container -->
 
     <footer>Footer</footer>
     <script
