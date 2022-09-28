@@ -20,55 +20,17 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="detail.css" />
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="slider.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <link rel="stylesheet" href="watchLater.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/slider.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+
+    <!-- reusabel components -->
+    <script src="/components//components.js"></script>
   </head>
   <body>
-    <!-- nav -->
-    <nav>
-      <div class="nav-container">
-        <div id="logo-icon-container">
-          <div id="logo"><h1>Imdb</h1></div>
-        </div>
-
-        <div id="search-container">
-          <input id="search-bar" placeholder="search movie by name" />
-        </div>
-
-        <div id="fav-icon-container">
-          <div id="fav">
-            <i class="fa-solid fa-bookmark"></i>
-            watchlater
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- end of nav -->
-
-    <!-- test -->
-
-    <!-- test -->
-
-    <!-- search result container -->
-    <ul id="search-result-container">
-      <!-- <li></li> -->
-    </ul>
-    <!-- end search result container -->
-
-    <!-- home -->
-
-    <!-- <div id="home-container">
-      <div id="carousel-session">
-         <img src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800">
-        <div id="slider-controller"><button>p</button> <button>n</button> </div>
-      </div>
-      <div id="upnext-session"></div>
-    </div> -->
+    <navbar-component></navbar-component>
 
     <div id="slider-container">
       <div id="slider-inner-container">
@@ -136,10 +98,7 @@
       </div>
     </div>
 
-    <!-- end of home -->
-
-    <!-- Movie details container -->
-    <section id="movie-details">
+    <!-- <section id="movie-details">
       <div class="container">
         <div id="title-container"><h1>Movie Name</h1></div>
         <div id="rating-container">
@@ -167,7 +126,7 @@
           </p>
         </div>
         <div id="details-container">
-          <!-- <h1>Details</h1> -->
+         
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             tortor dui, vulputate et diam sagittis, vestibulum pharetra enim.
@@ -185,9 +144,9 @@
           </p>
         </div>
         <div id="watchlist-container">
-          <div id="icon-container">
+          <button id="icon-container">
             <i class="fa-solid fa-circle-plus"></i>
-          </div>
+          </button>
 
           <h1>Add/remove</h1>
         </div>
@@ -201,15 +160,15 @@
           <li>names of peopel</li>
         </ul>
       </div>
-    </section>
-    <!-- end of movie detis container -->
+    </section> -->
 
-    <!-- watchlist container -->
-    <div id="watch-list-container">
-      <div id="watch-list-inner-container">
-        <div class="watch-later-movie-card">
+    <!-- <div id="watch-list-container">
+      <ul id="watch-list-inner-container">
+        <li class="watch-later-movie-card">
           <div class="watch-later-img">
-            <img />
+            <img
+                src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
+              />
           </div>
           <div class="watch-later-title">
             <h1>Movie title</h1>
@@ -223,16 +182,65 @@
             <div class="watch-later-details-container">
              <p>Sreeram </p>
             </div>
-             <div class="watch-later-button">
+             <button class="watch-later-button">
               <i class="fa-solid fa-bookmark"></i>
-             </div>
+             </button>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- end of watchlist container -->
+        </li>
 
-    <footer>Footer</footer>
+        <li class="watch-later-movie-card">
+          <div class="watch-later-img">
+            <img
+                src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
+              />
+          </div>
+          <div class="watch-later-title">
+            <h1>Movie title</h1>
+            <div class="watch-later-details-container">
+              <p>56 min</p>
+              |
+              <p>2/6</p>
+              |
+              
+            </div>
+            <div class="watch-later-details-container">
+             <p>Sreeram </p>
+            </div>
+             <button class="watch-later-button">
+              <i class="fa-solid fa-bookmark"></i>
+             </button>
+          </div>
+        </li>
+
+        <li class="watch-later-movie-card">
+          <div class="watch-later-img">
+            <img
+                src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
+              />
+          </div>
+          <div class="watch-later-title">
+            <h1>Movie title</h1>
+            <div class="watch-later-details-container">
+              <p>56 min</p>
+              |
+              <p>2/6</p>
+              |
+              
+            </div>
+            <div class="watch-later-details-container">
+             <p>Sreeram </p>
+            </div>
+             <button class="watch-later-button">
+              <i class="fa-solid fa-bookmark"></i>
+             </button>
+          </div>
+        </li>
+        
+      </ul>
+    </div> -->
+
+
+    <footer-component></footer-component>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

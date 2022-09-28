@@ -1,11 +1,13 @@
 footer{
     width: 100%;
-    background-color: rgb(23, 22, 22);
+    background-color: rgb(14, 14, 14);
     height: 10vh;
-    position: fixed;
     bottom: 0px;
     display: flex;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 25px;
+    margin-top: 10vh;
 }
