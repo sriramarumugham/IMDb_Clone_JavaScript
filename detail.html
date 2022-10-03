@@ -27,7 +27,7 @@
      <link rel="stylesheet" href="styles/footer.css">
 
     <!-- reusabel components -->
-    <script src="/components//components.js"></script>
+    <script src="./components/components.js"></script>
     <!-- components -->
   </head>
   <body>
@@ -39,14 +39,14 @@
       <div class="container">
         <div id="title-container"><h1>Movie Name</h1></div>
         <div id="rating-container">
-          <p>1/5 |</p>
+          <!-- <p>1/5 |</p>
           <p>year |</p>
-          <p>156min</p>
+          <p>156min</p> -->
         </div>
         <div id="poster-container">
-          <img 
+          <!-- <img 
             src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
-          />
+          /> -->
         </div>
         <div id="short-details-container">
           <!-- <p id="movie-plot">
@@ -63,34 +63,19 @@
           </p> -->
           <div>
             <div>
-              <p>Full Name :</p> 
+              <!-- <p>Full Name :</p> 
               <p>releaseDate :</p> 
               <p>genres :</p> 
               <p>languages :</p>
-              <p>imDbRatingVotes:</p>
+              <p>imDbRatingVotes:</p> -->
             </div>
           </div>
         </div>
         <div id="details-container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            tortor dui, vulputate et diam sagittis, vestibulum pharetra enim.
-            Etiam varius eu eros eu tempus. Morbi vehicula mi turpis, feugiat
-            cursus nulla lobortis vel. Duis quis sollicitudin augue. Phasellus
-            faucibus, urna a faucibus faucibus, mi lorem consectetur diam, eget
-            ullamcorper metus dolor vitae nunc. Curabitur egestas gravida
-            lacinia. Duis facilisis mollis velit non porta. Sed ac rutrum
-            ligula. Fusce a nulla rutrum, vehicula metus eget, porttitor magna.
-            Ut tincidunt vulputate arcu sed gravida. Donec dictum dui nisi, eget
-            venenatis nibh feugiat nec. Sed scelerisque, leo quis tincidunt
-            eleifend, massa diam finibus ligula, nec pulvinar justo sem sit amet
-            diam. Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus.
-          </p>
+       
         </div>
         <div id="watchlist-container">
           <button id="icon-container"  value="1" class="add-to-fav">
-            <!-- <i class="fa-solid fa-circle-plus"></i> -->
           </button>
           <h1>Add/remove</h1>
         </div>
@@ -136,7 +121,9 @@
       crossorigin="anonymous">
     </script>
     <script src="script.js"></script>
-    <script src="movieDetail.js"></script>
-    <script src="addToFav.js"></script>
+    <script src="movieDetail.js" type="module"></script>
+    <script src="addToFav.js" type="module"></script>
+    <script src="watchLatter.js" type="module"></script>
+    <!-- <script src="updateWatchlist.js" type="module"></script> -->
   </body>
 </html>

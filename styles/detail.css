@@ -195,7 +195,7 @@
 .similar-movie-discription>h1{
   
 }
-.similar-movie-discription>button{
+.similar-movie-discription>.add-to-fav-1{
   background-color: transparent;
   border: 0px;
   position: absolute;
@@ -212,10 +212,24 @@
   background-size: cover;
   
 }
-/* .similar-movie-discription>button>i{
-  font-size: 25px;
-  color: aliceblue;
-} */
+
+.similar-movie-discription>.add-to-fav-2{
+  background-color: transparent;
+  border: 0px;
+  position: absolute;
+  top:80%;
+  right: 15%;
+  height: 50px;
+  width: 50px;
+  /* https://cdn-icons-png.flaticon.com/512/6924/6924811.png */
+  background: url( https://cdn-icons-png.flaticon.com/512/5667/5667029.png  ) no-repeat; 
+  /* background: url( https://cdn-icons-png.flaticon.com/512/786/786251.png) no-repeat;  */
+
+  /* https://cdn-icons-png.flaticon.com/512/6924/6924811.png */
+  /* https://cdn-icons-png.flaticon.com/512/786/786251.png */
+  background-size: cover;
+  
+}
 @media only screen and (max-width: 820px) {
   .container {
     grid-template-columns: 1fr;

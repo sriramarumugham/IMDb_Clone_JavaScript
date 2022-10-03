@@ -1,13 +1,16 @@
 const urlParams=new URLSearchParams(window.location.search);
 const movieId=urlParams.get('id');
 
+import {addToFavEventListner} from './addToFav.js';
+import { checkMovie } from './localStorage.js';
+
 console.log(movieId);
 
 if(movieId){
 
 // let apiKey = "k_dbmklrp6";
-let Key = "k_o7kcaag9";
-// let apiKey="k_8073znj9"
+// let Key = "k_o7kcaag9";
+let Key="k_8073znj9"
 
 let root='https://imdb-api.com/en/API/Title/';
 
@@ -30,6 +33,11 @@ const getMoviesById = async (id) => {
 
  function  fillMarkup (movie){
   console.log(movie)
+  document.getElementById('watchlist-container').innerHTML=`
+  <button id="icon-container"  value='${movie.id}?${movie.image}?${movie.imDbRating}?${movie.title}' class="add-to-fav">
+  </button>
+  <h1>Add/remove</h1>
+  `
   document.getElementById('rating-container').innerHTML=`<p>${movie.imDbRating} | ${movie.year} | ${movie.runtimeMin? movie.runtimeMin: movie.type}</p> `;
   document.getElementById('poster-container').innerHTML=`<img src=${movie.image}/>`
  document.getElementById('details-container').innerHTML=`<p>${movie.plot}</p>`;
@@ -70,20 +78,17 @@ const getMoviesById = async (id) => {
             <div class="similar-movie-discription">
               <a href="detail.html?id=${similar.id}"><p>${similar.title}</p></a>
               <p>${similar.imDbRating}</p>
-              <button class="add-to-fav" value='${similar.id}'><i class="fa-solid fa-bookmark"></i></button>
+
+              <button class="add-to-fav${ checkMovie(similar.id) ? " add-to-fav-1"   : " add-to-fav-2" }"    value='${similar.id}?${similar.image}?${similar.imDbRating}?${similar.title}'></button>
+
+              
             </div>
           </li>
     `
 
    })
 
-   const favButtons=document.querySelectorAll('.add-to-fav');
-
-   favButtons.forEach((button)=>{
-       button.addEventListener('click' , function(e){
-           console.log("clicking" , e.target)
-       })
-   })
+   addToFavEventListner();
 
  }
 
