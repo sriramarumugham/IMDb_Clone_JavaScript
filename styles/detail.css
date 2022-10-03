@@ -79,26 +79,26 @@
   justify-content: center;
   align-items: center;
 }
-#icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+#watchlist-container>button {
   height: 100px;
-  padding: 10px;
   width: 100px;
-  /* background-color: white; */
   border: 0px;
-  /* background: url(https://tse2.mm.bing.net/th?id=OIP.U88J_cJjZbfpEGjWI3si7QHaEK&pid=Api&P=0) no-repeat; */
-  background: url( https://cdn-icons-png.flaticon.com/512/4677/4677490.png) no-repeat;
-  
- 
   background-size: cover;
-  /* background-image: url(https://cdn-icons-png.flaticon.com/512/4677/4677490.png) no-repeat; */
+
 }
-#icon-container > i {
-  font-size: 50px;
-  color: yellow;
-  padding: 10px;
+
+#watchlist-container>.fav-button{
+  background: url(https://cdn-icons-png.flaticon.com/512/4493/4493782.png);
+  background-size: cover;
+
+}
+
+#watchlist-container>.un-fav-button{
+  background: url(https://cdn-icons-png.flaticon.com/512/1828/1828817.png);
+  background-size: cover;
+ 
 }
 
 #cast-container {

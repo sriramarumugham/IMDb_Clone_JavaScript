@@ -1,8 +1,13 @@
-import { addToFavEventListner  } from "./addToFav.js";
+import { addToFavEventListner  , addOrDeletMovie } from "./addToFav.js";
+
 
 
 
 let movieList={};
+
+let similarMovies=[];
+
+let movie={}
 
 
 getMovie();
@@ -11,20 +16,20 @@ getMovie();
 
 
 function addMovie(obj){
-    console.log(obj);
+    // console.log(obj);
     movieList[obj.id]=obj;
     updateMovie();
 }
 
 function deleteMovie(obj){
-  console.log(obj);
+  // console.log(obj);
   delete movieList[obj.id];
   updateMovie();
 }
 
 function checkMovie(key){
      if(movieList && movieList[key]){
-        return false;
+        return false;  
      }
      return true;
 }
@@ -45,6 +50,9 @@ function updateMovie(){
   localStorage.setItem('movieList', JSON.stringify(movieList));
   movieList =JSON.parse(localStorage.getItem('movieList')) ;
   updateFavouriteMoviesMarkup();
+  updateSimilarMovies(similarMovies);
+  WatchlistContainer(movie);
+
 }
 
 function updateFavouriteMoviesMarkup() {
@@ -92,5 +100,45 @@ if (length == 0) {
 
 }
 
-export {movieList , addMovie , deleteMovie , checkMovie , getMovie , updateFavouriteMoviesMarkup};
+function updateSimilarMovies(similars) {
+  document.getElementById("similar-movie-list").innerHTML ="";
+ 
+   similarMovies=similars;
+  similars.forEach((similar) => {
+    document.getElementById("similar-movie-list").innerHTML += `
+    <li class="similar-movie-card">
+            <div class="similar-movie-img-container">
+             <a href="detail.html?id=${similar.id}"> <img src="${
+      similar.image
+    }"> </a>
+            </div>
+            <div class="similar-movie-discription">
+              <a href="detail.html?id=${similar.id}"><p>${similar.title}</p></a>
+              <p>${similar.imDbRating}</p>
+              <button class="add-to-fav${
+                checkMovie(similar.id) ? " add-to-fav-1" : " add-to-fav-2"
+              }"    value='${similar.id}?${similar.image}?${
+      similar.imDbRating
+    }?${similar.title}'></button>
+            </div>
+          </li>
+    `;
+  });
+  addToFavEventListner();
+}
+
+function WatchlistContainer(movieObj){
+
+  movie=movieObj;
+  document.getElementById("watchlist-container").innerHTML="";
+  document.getElementById("watchlist-container").innerHTML = `
+  <button id="watch-latter-button" class=${checkMovie(movie.id)?"fav-button":"un-fav-button" }  value='${movie.id}?${movie.image}?${movie.imDbRating}?${movie.title}'></button>
+`;
+  document.getElementById('watch-latter-button').addEventListener('click' , function(e){
+    const value=e.target.value;
+    addOrDeletMovie(value);
+  })
+}
+
+export {movieList , addMovie , deleteMovie , checkMovie , getMovie , updateFavouriteMoviesMarkup , updateSimilarMovies , WatchlistContainer} ;
 
