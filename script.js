@@ -19,9 +19,10 @@ searchBar.addEventListener("keyup", () => {
     searchResultContainer.classList.remove("hide-search-container");
     searchResultContainer.innerHTML = `<li id="search-result-movie-card"> 
     <div id="search-result-img-container">
-      <img
+      <a><img
         src="${"https://cdn-icons-png.flaticon.com/512/7797/7797065.png"}"
       />
+      </a>
     </div>
     <div id="search-result-movie-title">
       <h4>${input}</h4>
@@ -41,10 +42,12 @@ const debounce = (input) => {
   }, 400);
 };
 
+
 let apiKey = "k_dbmklrp6";
 // let apiKey = "k_o7kcaag9";
-// let apiKey="k_8073znj9"
-// let rootUrl='https://imdb-api.com/en/API/Search/k_dbmklrp6/wonder'
+// let apiKey="k_8073znj9";
+
+
 let rootUrl = "https://imdb-api.com/en/API/Search/";
 
 const getMovies = async (serachTerm) => {
