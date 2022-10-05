@@ -9,8 +9,8 @@ const movieId = urlParams.get("id");
 
 //api keys
 
-let Key = "k_dbmklrp6";
-// let Key = "k_o7kcaag9";
+// let Key = "k_dbmklrp6";
+let Key = "k_o7kcaag9";
 // let Key= "k_8073znj9";
 
 if (movieId) {

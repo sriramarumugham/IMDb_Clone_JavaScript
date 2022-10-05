@@ -81,8 +81,17 @@
 }
 
 @media only screen and (max-width: 520px) {
+
+
+    #watch-list-container{
+       
+        margin: 30vh auto 20.5vh auto;
+    
+    }
+
     .watch-later-movie-card{
         height: 400px;
         width: 200px;
     }
+
 }

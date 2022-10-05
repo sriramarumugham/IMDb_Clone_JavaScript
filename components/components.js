@@ -18,7 +18,7 @@ class FooterComponent extends HTMLElement{
   connectedCallback(){
     this.innerHTML=`<footer>
     <a href="https://www.linkedin.com/in/sriram-a-78494b1aa/" target="_blank"><p>Linkedin</p></a>
-    <a href="https://github.com/sriramarumugham/IMDb_Clone_JavaScript" target="_blank"><p>Source-code</p></a>
+    <a href="https://github.com/sriramarumugham/IMDb_Clone_JavaScript" target="_blank"><p>GitHub</p></a>
     <a href="https://www.instagram.com/itz_xxiii/?hl=en" target="_blank"><p>Instagram</p></a>
     <a href="https://www.youtube.com/channel/UCgadvIAHMlBB-FEFApnOKZA" target="_blank"><p>Youtube</p></a>
     </footer>`
