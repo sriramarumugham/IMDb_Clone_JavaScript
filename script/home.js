@@ -1,3 +1,4 @@
+// 4 movies stored for creating a slider and upnext session 
 const HomePageMovies = [
   {
     id: "tt2015381",
@@ -57,17 +58,26 @@ const HomePageMovies = [
 fillLestSession();
 fillUpNextSession();
 
+//swaping the array to change the queue in a 3 second interval 
 const myInterval = setInterval(swap, 3000);
 
 function swap() {
+
+  //swaps
   let temp = HomePageMovies[0];
   HomePageMovies[0] = HomePageMovies[1];
   HomePageMovies[1] = HomePageMovies[2];
   HomePageMovies[2] = HomePageMovies[3];
   HomePageMovies[3] = temp;
-  fillLestSession();
-  fillUpNextSession();
+
+  //calls the function to re-rende the list
+    //fill the main image session
+    fillLestSession();
+    //fills the upnext session
+    fillUpNextSession();
 }
+
+// -------------------------------------------HTML RENDERRED PART----------------------------------------------
 
 function fillLestSession() {
   document.getElementById("left").innerHTML = "";
@@ -103,14 +113,14 @@ function fillUpNextSession() {
   document.getElementById("upnext-inner-container").innerHTML = "";
   for (let i = 1; i < 4; i++) {
     document.getElementById("upnext-inner-container").innerHTML += `
-        <div id="upnext-movie-card">
+      <div id="upnext-movie-card">
         <div id="upnext-img-container">
-        <a href="detail.html?id=${HomePageMovies[i].id}"> <img
-            src="${HomePageMovies[i].image}"
-          /></a>
+           <a href="detail.html?id=${HomePageMovies[i].id}"> <img
+             src="${HomePageMovies[i].image}"
+           /></a>
         </div>
         <div id="upnext-movie-title">
-        <a href="detail.html?id=${HomePageMovies[i].id}"><h4>${HomePageMovies[i].title}</h4> </a>
+           <a href="detail.html?id=${HomePageMovies[i].id}"><h4>${HomePageMovies[i].title}</h4> </a>
         </div>
       </div>
         `;

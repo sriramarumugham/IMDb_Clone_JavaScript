@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMDb</title>
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXEn4YivCexFlU2NlhQtkIr_LdXe42I4CmWdzolXAIcZyDtXXgUwaeH3DviFdfVy8sVA&usqp=CAU">
-     
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXEn4YivCexFlU2NlhQtkIr_LdXe42I4CmWdzolXAIcZyDtXXgUwaeH3DviFdfVy8sVA&usqp=CAU"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -26,104 +30,64 @@
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/detail.css" />
     <link rel="stylesheet" href="styles/home.css" />
-     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/footer.css" />
 
-    <!-- reusabel components -->
+   
+    <!-- script for reusable components header and footer -->
+
     <script src="./components/components.js"></script>
-    <!-- components -->
+    
   </head>
   <body>
-
-
+    <!-- reusable navbar with search contaner -->
     <navbar-component></navbar-component>
 
     <section id="movie-details">
       <div class="container">
         <div id="title-container"><h1>Movie Name</h1></div>
-        <div id="rating-container">
-         
-        </div>
+        <div id="rating-container"></div>
         <div id="poster-container">
-          <!-- <img 
-            src="https://www.posterteam.com/multimedia/187/norway_travel_poster_1948.jpg?width=400&height=800"
-          /> -->
+          <!-- script injects poster -->
         </div>
         <div id="short-details-container">
-          <!-- <p id="movie-plot">
-            em ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            tortor dui, vulputate et diam sagittis, vestibulum pharetra enim.
-            Etiam varius eu eros eu tempus. Morbi vehicula mi turpis, feugiat
-            cursus nulla lobortis vel. Duis quis sollicitudin augue. Phasellus
-            faucibus, urna a faucibus faucibus, mi lorem consectetur diam, eget
-            ullamcorper metus dolor vitae nunc. Curabitur egestas gravida
-            lacinia. Duis facilisis mollis velit non porta. Sed ac rutrum
-            ligula. Fusce a nulla rutrum, vehicula metus eget, porttitor magna.
-            Ut tincidunt vulputate arcu sed gravida. Donec dictum dui nisi, eget
-            venenatis nibh feugiat nec. Sed scele
-          </p> -->
+          <!-- script injects plot -->
           <div>
             <div>
-              <!-- <p>Full Name :</p> 
-              <p>releaseDate :</p> 
-              <p>genres :</p> 
-              <p>languages :</p>
-              <p>imDbRatingVotes:</p> -->
+              <!-- script injects details of a movies -->
             </div>
           </div>
         </div>
-        <div id="details-container">
-       
-        </div>
+        <div id="details-container"></div>
         <div id="watchlist-container">
-          <button id="icon-container"  value="1" class="add-to-fav">
-          </button>
-          <h1>Add/remove</h1>
+          <!-- script injects a button -->
         </div>
       </div>
 
-   
-         
       <div id="cast-container">
         <ul id="movie-cast">
-          <li>
-            <div class="cast-image-container"><img></div>
-            <a href="#"><h4>name</h4></a>
-          </li>
+          <!-- script injects the cast cards -->
         </ul>
       </div>
 
       <div id="similar-movie-container">
         <ul id="similar-movie-list">
-
-          <li class="similar-movie-card">
-            <div class="similar-movie-img-container">
-              <img src="${similar.image}">
-            </div>
-            <div class="similar-movie-discription">
-              <p>${similar.title}</p>
-              <p>${similar.imDbRating}</p>
-              <button class="add-to-fav" value='${similar.id}'></button>
-            </div>
-          </li>
-
+          <!-- script injects the li similar movies cards -->
         </ul>
       </div>
-
-      
     </section>
 
-  
-    
+    <!-- reusable footer -->
     <footer-component></footer-component>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous">
     </script>
-    <script src="script.js"></script>
-    <script src="movieDetail.js" type="module"></script>
-    <script src="addToFav.js" type="module"></script>
-    <script src="watchLatter.js" type="module"></script>
-    <!-- <script src="updateWatchlist.js" type="module"></script> -->
+    
+    <script src="./script/script.js"></script>
+    <script src="./script/movieDetail.js" type="module"></script>
+    <script src="./script/addToFav.js" type="module"></script>
+    <script src="./script/watchLatter.js" type="module"></script>
   </body>
 </html>
