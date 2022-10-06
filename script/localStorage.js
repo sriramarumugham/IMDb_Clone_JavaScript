@@ -122,6 +122,9 @@ function updateFavouriteMoviesMarkup() {
 
 
 function updateSimilarMovies(similars) {
+  if(document.getElementById('similar-movie-list')!=null){
+
+  
   document.getElementById("similar-movie-list").innerHTML = "";
 
   similarMovies = similars;
@@ -146,12 +149,15 @@ function updateSimilarMovies(similars) {
     `;
   });
   addToFavEventListner();
+
+  }
 }
 
 //changet the name
 
 function WatchlistContainer(movieObj) {
   movie = movieObj;
+  if( document.getElementById("watchlist-container")!=null){
   document.getElementById("watchlist-container").innerHTML = "";
   document.getElementById("watchlist-container").innerHTML = `
   <button id="watch-latter-button" class=${
@@ -166,6 +172,7 @@ function WatchlistContainer(movieObj) {
       const value = e.target.value;
       addOrDeletMovie(value);
     });
+  }
 }
 
 
