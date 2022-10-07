@@ -1,5 +1,6 @@
 # IMDb_Clone_JavaScript  https://imdb-clone-javascript-bt6fdrbld-sriramarumugham.vercel.app/
 
+explained: https://youtu.be/A28iB3ifFPs
 API USED :
 
 api used to search a movie by name and search a movie by a unique id  https://imdb-api.com/API
